@@ -1,0 +1,52 @@
+{
+  "name": "gatolang-lsp",
+  "displayName": "GatoLang",
+  "description": "GatoLang language support with diagnostics via gatoc",
+  "version": "0.0.1",
+  "publisher": "gatoware",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:gatolang"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "gatolang",
+        "aliases": [
+          "GatoLang",
+          "gatolang"
+        ],
+        "extensions": [
+          ".gw"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gatolang",
+        "scopeName": "source.gatolang",
+        "path": "./syntaxes/gatolang.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p ."
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.4.0",
+    "vscode": "^1.1.45"
+  }
+}

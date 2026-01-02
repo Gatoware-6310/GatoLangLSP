@@ -1,0 +1,56 @@
+{
+  "name": "GatoLang",
+  "scopeName": "source.gatolang",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#numbers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.gatolang",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.gatolang",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.gatolang",
+          "match": "\\b(import|class|new|return|if|else|while|loop|break|final)\\b"
+        },
+        {
+          "name": "storage.type.gatolang",
+          "match": "\\b(void|int|float|bool|string)\\b"
+        },
+        {
+          "name": "constant.language.boolean.gatolang",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.gatolang",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.gatolang",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.gatolang",
+      "match": "\\b\\d+(?:\\.\\d+)?\\b"
+    }
+  }
+}
