@@ -1,49 +1,24 @@
-# GatoLang LSP (VS Code)
+# GatoLang LSP
 
-Minimal VS Code extension + language server that runs `gatoc --check --json-diags` for diagnostics.
+A minimal VS Code extension that provides real-time diagnostics for GatoLang files using the `gatoc` language server.
 
-## Prerequisites
+## Features
 
-- Build/install `gatoc` from `/home/gatoware/GatoLang/GatoLang/src/gatolang`.
-- Ensure `gatoc` is on your `PATH`, or set `GATOC_PATH` to the full path.
+- Real-time linting and error detection
+- JSON-formatted diagnostics via `gatoc --check`
+- Debounced diagnostics on file change with immediate validation on save
 
-## Install dependencies
+## Requirements
 
-From the repo root:
+- `gatoc` installed and available on your `PATH`, or set the `GATOC_PATH` environment variable to the full executable path
 
-```
-npm install
-```
+3. Open the repo in VS Code and press `F5` to run the extension in the Extension Development Host
 
-From the server folder:
+## Usage
 
-```
-cd server
-npm install
-```
-
-## Build
-
-From the repo root:
-
-```
-npm run build
-```
-
-From the server folder:
-
-```
-cd server
-npm run build
-```
-
-## Run in VS Code
-
-- Open this repo in VS Code.
-- Press `F5` to run the extension (uses `.vscode/launch.json`).
-- In the Extension Development Host, open `test-workspace/` and edit `good.gw` / `bad.gw`.
+Open a `.gw` file to see diagnostics in the editor. Errors appear as you type.
 
 ## Troubleshooting
 
-- If the server cannot find `gatoc`, set `GATOC_PATH` to the full executable path.
-- Diagnostics are debounced on change (~300ms) and run immediately on save.
+- If the server cannot find `gatoc` or if your `gatoc` is not on your PATH, set the `GATOC_PATH` environment variable to the full executable path.
+- Please report any other bugs you find on GitHub. (https://github.com/Gatoware-6310/GatoLangLSP)

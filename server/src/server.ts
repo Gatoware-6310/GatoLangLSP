@@ -208,7 +208,7 @@ async function writeTempFile(docPath: string, contents: string): Promise<string>
 
 async function runGatoc(filePath: string): Promise<GatocResponse> {
   const gatocPath = process.env.GATOC_PATH || "gatoc";
-  const args = ["--check", "--json-diags", filePath];
+  const args = [filePath, "--check", "--json-diags"];
 
   return new Promise((resolve, reject) => {
     const child = spawn(gatocPath, args, { stdio: ["ignore", "pipe", "pipe"] });

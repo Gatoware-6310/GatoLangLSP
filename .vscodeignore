@@ -1,0 +1,8 @@
+**/.git/**
+**/.vscode/**
+**/node_modules/**
+**/*.ts
+server/**
+test-workspace/**
+*.log
+tsconfig.json
