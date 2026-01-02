@@ -21,7 +21,8 @@ export function activate(context: ExtensionContext): void {
   };
 
   client = new LanguageClient("gatolang", "GatoLang Language Server", serverOptions, clientOptions);
-  context.subscriptions.push(client.start());
+  client.start();
+  context.subscriptions.push(client);
 }
 
 export function deactivate(): Thenable<void> | undefined {
