@@ -1,5 +1,5 @@
 {
-  "name": "GatoLang Language Support",
+  "name": "gatolang-language-support",
   "displayName": "GatoLang",
   "description": "GatoLang language support (syntax highlighting + diagnostics via gatoc). Please ensure you have gatoc installed and available in your PATH before using this extension.",
   "version": "0.0.1",
