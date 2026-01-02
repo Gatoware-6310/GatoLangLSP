@@ -1,0 +1,2 @@
+int value = "oops";
+print(value);
