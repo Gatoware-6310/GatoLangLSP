@@ -12,7 +12,7 @@ A minimal VS Code extension that provides real-time diagnostics for GatoLang fil
 
 - `gatoc` installed and available on your `PATH`, or set the `GATOC_PATH` environment variable to the full executable path
 
-3. Open the repo in VS Code and press `F5` to run the extension in the Extension Development Host
+- Open the repo in VS Code and press `F5` to run the extension in the Extension Development Host
 
 ## Usage
 
